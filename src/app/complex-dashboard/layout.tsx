@@ -6,14 +6,18 @@ export default function DashboardLayout({
     children, 
     users,
     revenue,
-    notifications,
+    notifications, 
+    login, 
 }: { 
     children: React.ReactNode;
     users: React.ReactNode;
     revenue: React.ReactNode;
     notifications: React.ReactNode;
-}) {
-    return ( 
+    login: React.ReactNode;
+}) { 
+
+    const isLoggedIn = false; // Simulated authentication state
+    return isLoggedIn ? ( 
     
         <div>
             {children}
@@ -26,12 +30,16 @@ export default function DashboardLayout({
                     <h2>Revenue Metrics</h2>
                     {revenue}
                 </div>
-                <div style={{ flex: 1, border: '1px solid #ccc', padding: '10px' }}>
+                <div style={{ flex: 1 , border: '1px solid #ccc', padding: '10px', }}>
                     <h2>Notifications</h2>
                     {notifications}
-                </div>
-      
+              </div>
         </div> 
-        </div> 
+        </div>  
+    ) : (
+        <div>
+            {login}
+        </div>
+        
     );
 }
