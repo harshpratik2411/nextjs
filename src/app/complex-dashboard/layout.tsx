@@ -16,7 +16,7 @@ export default function DashboardLayout({
     login: React.ReactNode;
 }) { 
 
-    const isLoggedIn = false; // Simulated authentication state
+    const isLoggedIn = true; // Simulated authentication state
     return isLoggedIn ? ( 
     
         <div>
